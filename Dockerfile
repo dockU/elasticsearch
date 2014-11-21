@@ -7,5 +7,6 @@ ADD https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch
 
 RUN /usr/bin/pacman -Syu --noconfirm --needed tar
 RUN /bin/tar -C /opt/ xf /opt/elasticsearch-$ES_VER.tar.gz
+RUN rm /opt/elasticsearch-$ES_VER.tar.gz
 
 ADD run /service/elasticsearch/
